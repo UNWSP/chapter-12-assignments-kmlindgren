@@ -18,9 +18,9 @@ public class DistanceFromAverage
          System.out.print("Please enter a value for the array size >> ");
          enteredSize = input.nextInt();
       }
-      catch(Exception e)
+      catch(InputMismatchException e)
       {
-         System.out.println("Invalid value for array size");
+         System.out.println("Invalid value for array size; please enter a whole number.");
          canCreateArray = false;
          input.nextLine();
       }
@@ -46,7 +46,7 @@ public class DistanceFromAverage
                  entry = input.nextDouble();
                  isValOk = true;
              }
-             catch(Exception e)
+             catch(InputMismatchException e)
              {
                 isValOk = false;
                 input.nextLine();
@@ -64,7 +64,7 @@ public class DistanceFromAverage
                      QUIT + " to quit >> ");
                   entry = input.nextDouble();
                }
-               catch(Exception e)
+               catch(InputMismatchException e)
                {
                   --x;
                   input.nextLine();
